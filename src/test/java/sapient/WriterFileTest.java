@@ -1,4 +1,4 @@
-package sapient;
+/*package sapient;
 
 import static org.junit.Assert.assertEquals;
 
@@ -13,16 +13,16 @@ import org.junit.Test;
 
 import com.sapient.WritePropertyFile;
 
-/**
+*//**
  * Unit test for Property Writer App.
- */
+ *//*
 public class WriterFileTest
 {
-    /**
+    *//**
      * create the property File
      * No of Thread : Concurrent thread able to read database and writing to file to adjust concurrency level.
      * @throws SQLException 
-     */
+     *//*
 	
 	@Ignore
     public void createData() throws SQLException
@@ -38,9 +38,9 @@ public class WriterFileTest
     	WritePropertyFile.LoadData(noOfThreads,fetchSize);
     }
 	
-	/**
+	*//**
 	 * Test Case to check Is property file created.
-	 */
+	 *//*
 	@Test
 	public void isPropertyfileCreated(){
 		File goldman=new File("D:/property_file/Goldman/propertise.props");
@@ -52,9 +52,9 @@ public class WriterFileTest
 		Assert.assertTrue(wellington.isFile());
 	}
 	
-	/**
+	*//**
 	 * Count No of Record Written in File
-	 */
+	 *//*
 	@Test
 	public void propertyCountInFile(){
 		
@@ -94,11 +94,11 @@ public class WriterFileTest
 		assertEquals(expectedWellington,actualWellington);
 	}
 	
-	/**
+	*//**
 	 * Compute record count
 	 * @param file
 	 * @return count
-	 */
+	 *//*
 	private int recordCount(String file){
 		int count=0;
 		String line = null;
@@ -113,12 +113,12 @@ public class WriterFileTest
 		}
 		return count;
 	}
-	/**
+	*//**
 	 * match the file content
 	 * @param file
 	 * @param regex
 	 * @return boolean
-	 */
+	 *//*
 	private boolean contentMatch(String file,String regex){
 		boolean match=true;
 		
@@ -135,4 +135,4 @@ public class WriterFileTest
 		}
 		return match;
 	}
-}
+}*/

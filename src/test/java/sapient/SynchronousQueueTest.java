@@ -1,14 +1,14 @@
-package sapient;
+/*package sapient;
 
 import org.junit.Before;
 import org.junit.Test;
 
 import com.sapient.SynchnousQueue.SynchronousQueueCustom;
-/**
+*//**
  * Test case of Synchronous Queue
  * @author kyada3
  *
- */
+ *//*
 public class SynchronousQueueTest {
 	SynchronousQueueCustom<Integer> queue;
 	
@@ -17,10 +17,10 @@ public class SynchronousQueueTest {
 		queue=new SynchronousQueueCustom<Integer>();
 	}
 	
-	/**
+	*//**
 	 * Thread Blocking Operation of put/take
 	 * @throws InterruptedException
-	 */
+	 *//*
 	@Test
 	public void testSQ() throws InterruptedException{
 		
@@ -41,11 +41,11 @@ public class SynchronousQueueTest {
 		producer2.start();
 	}
 	
-	/**
+	*//**
 	 * Producer Thread
 	 * @author kyada3
 	 * @param <E>
-	 */
+	 *//*
 	class Producer<E> implements Runnable{
 		
 		SynchronousQueueCustom<E> queue;
@@ -65,11 +65,11 @@ public class SynchronousQueueTest {
 		}
 	}
 	
-	/**
+	*//**
 	 * Consumer Thread
 	 * @author kyada3
 	 * @param <E>
-	 */
+	 *//*
 	class Consumer<E> implements Runnable {
 
 		SynchronousQueueCustom<E> queue;
@@ -89,3 +89,4 @@ public class SynchronousQueueTest {
 		}
 	}
 }
+*/

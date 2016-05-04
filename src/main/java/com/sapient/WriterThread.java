@@ -16,8 +16,6 @@ import java.util.Set;
 
 import javax.sql.DataSource;
 
-import com.sapient.model.FileDto;
-import com.sapient.util.ConnectionFactory;
 
 /**
  * Thread to write the property file
@@ -25,7 +23,7 @@ import com.sapient.util.ConnectionFactory;
  */
 class WriterThread implements Runnable {
 	
-	private final static DataSource dataSource = ConnectionFactory.getConnInstance();
+	//private final static DataSource dataSource = ConnectionFactory.getConnInstance();
 	
 	int startIndex;
 	int endIndex;
@@ -37,7 +35,7 @@ class WriterThread implements Runnable {
 		this.fetchSize=fetchSize;
 	}
 
-	public void run() {
+	public void run() {/*
 
 		ResultSet result = null;
 		String sql = "select * from property_details where file_id between ? and ?";
@@ -61,18 +59,18 @@ class WriterThread implements Runnable {
 			String filePath;
 			String key;
 			String value;
-			FileDto file;
+			//FileDto file;
 
 			while (result.next()) {
 				filePath = result.getString("file_path");
 				key = result.getString("file_key");
 				value = result.getString("file_value");
 
-				file = new FileDto(filePath, key, value);
+				//file = new FileDto(filePath, key, value);
 
 				StringBuilder buffer = new StringBuilder();
-				buffer.append(file.getKey()).append("=")
-						.append(file.getValue()).append(System.lineSeparator());
+				//buffer.append(file.getKey()).append("=")
+					//	.append(file.getValue()).append(System.lineSeparator());
 				ByteBuffer byteBuffer = ByteBuffer.wrap(buffer.toString()
 						.getBytes());
 
@@ -80,18 +78,18 @@ class WriterThread implements Runnable {
 				options.add(StandardOpenOption.CREATE);
 				options.add(StandardOpenOption.APPEND);
 
-				Path path = Paths.get(file.getFilePath());
-				Files.createDirectories(path);
-				Path filePathtoCreate = Paths.get(file.getFilePath(),
-						"propertise.props");
+				//Path path = Paths.get(file.getFilePath());
+				//Files.createDirectories(path);
+				//Path filePathtoCreate = Paths.get(file.getFilePath(),
+					//	"propertise.props");
 
-				FileChannel fileChannel = FileChannel.open(filePathtoCreate,
-						options);
-				fileChannel.write(byteBuffer);
-				fileChannel.close();
+				//FileChannel fileChannel = FileChannel.open(filePathtoCreate,
+					//	options);
+				//fileChannel.write(byteBuffer);
+				//fileChannel.close();
 			}
 		} catch (SQLException | IOException e) {
 			e.printStackTrace();
 		}
-	}
+	*/}
 }

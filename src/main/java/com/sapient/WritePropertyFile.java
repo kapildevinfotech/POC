@@ -10,9 +10,7 @@ import java.util.concurrent.TimeUnit;
 
 import javax.sql.DataSource;
 
-import com.sapient.exception.ExceptionHandler;
 import com.sapient.util.ConnectionFactory;
-import com.sapient.util.ThreadPoolFactory;
 
 /**
  * Class to provide the writing of multithreaded property file.
@@ -22,8 +20,8 @@ import com.sapient.util.ThreadPoolFactory;
  */
 public class WritePropertyFile {
 
-   private final static ExecutorService executors = ThreadPoolFactory.getThreadPool();
-   private final static DataSource dataSource=ConnectionFactory.getConnInstance();
+   //private final static ExecutorService executors = ThreadPoolFactory.getThreadPool();
+   private final static DataSource dataSource=(DataSource) ConnectionFactory.getConnInstance();
    
    
 	/**
@@ -50,7 +48,7 @@ public class WritePropertyFile {
 			stmt.executeBatch();
    	}
    	
-	public static void LoadData(int noOfThreads,int fetchSize) {
+	public static void LoadData(int noOfThreads,int fetchSize) {/*
 		String sql="select count(1) as count from property_details";
 		
 		try(Connection connection =dataSource.getConnection();
@@ -89,5 +87,5 @@ public class WritePropertyFile {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-	}
+	*/}
 }
