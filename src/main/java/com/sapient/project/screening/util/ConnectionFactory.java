@@ -1,4 +1,4 @@
-package com.sapient.util;
+package com.sapient.project.screening.util;
 
 import java.io.FileNotFoundException;
 import java.io.InputStream;

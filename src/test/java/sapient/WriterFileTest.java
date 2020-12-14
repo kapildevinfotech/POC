@@ -11,11 +11,9 @@ import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
 
-import com.sapient.WritePropertyFile;
+import com.sapient.project.screening.WritePropertyFile;
 
-*//**
- * Unit test for Property Writer App.
- *//*
+*//*
 public class WriterFileTest
 {
     *//**

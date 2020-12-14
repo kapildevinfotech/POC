@@ -1,4 +1,4 @@
-package com.sapient.util;
+package com.sapient.project.screening.util;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;

@@ -1,9 +1,5 @@
-package com.sapient.SynchnousQueue;
-/**
- * Blocking Queue 
- * @author kyada3
- * @param <E>
- */
+package com.sapient.project.screening.SynchnousQueue;
+
 interface BlockingQueueCustom<E> {
       void put(E item)  throws InterruptedException ;
       E take()  throws InterruptedException;

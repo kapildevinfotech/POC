@@ -1,4 +1,4 @@
-package com.sapient.model;
+package com.sapient.project.screening.model;
 /**
  * File Object used to represent row data of Database
  * @author kyada3

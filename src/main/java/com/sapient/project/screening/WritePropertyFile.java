@@ -1,16 +1,14 @@
-package com.sapient;
+package com.sapient.project.screening;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.TimeUnit;
 
 import javax.sql.DataSource;
 
-import com.sapient.util.ConnectionFactory;
+import com.sapient.project.screening.exception.ExceptionHandler;
+import com.sapient.project.screening.util.ConnectionFactory;
+import com.sapient.project.screening.util.ThreadPoolFactory;
 
 /**
  * Class to provide the writing of multithreaded property file.
@@ -20,18 +18,9 @@ import com.sapient.util.ConnectionFactory;
  */
 public class WritePropertyFile {
 
-   //private final static ExecutorService executors = ThreadPoolFactory.getThreadPool();
+   private final static ExecutorService executors = ThreadPoolFactory.getThreadPool();
    private final static DataSource dataSource=(DataSource) ConnectionFactory.getConnInstance();
-   
-   
-	/**
-	 * Method to initiate no of threads to read for DB asynchronously and write
-	 * into property files
-	 * 
-	 * @param noOfThreads
-	 * @throws SQLException 
-	 */
-   
+
    	public static void createData() throws SQLException{
    		String sql="insert into property_details(file_path,file_key,file_value) values(?,?,?)";
 		
@@ -48,12 +37,12 @@ public class WritePropertyFile {
 			stmt.executeBatch();
    	}
    	
-	public static void LoadData(int noOfThreads,int fetchSize) {/*
+	public static void LoadData(int noOfThreads,int fetchSize) {
 		String sql="select count(1) as count from property_details";
 		
 		try(Connection connection =dataSource.getConnection();
-				Statement stmt = connection.createStatement();
-				ResultSet result = stmt.executeQuery(sql);) {
+			Statement stmt = connection.createStatement();
+			ResultSet result = stmt.executeQuery(sql);) {
 
 			// Create the threads
 			Thread[] threadList = new Thread[noOfThreads];
@@ -87,5 +76,6 @@ public class WritePropertyFile {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-	*/}
+	}
+
 }

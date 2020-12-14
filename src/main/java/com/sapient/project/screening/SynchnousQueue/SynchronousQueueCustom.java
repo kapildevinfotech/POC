@@ -1,10 +1,5 @@
-package com.sapient.SynchnousQueue;
+package com.sapient.project.screening.SynchnousQueue;
 
-/**
- * Implementation of custom SynchronousQueue
- * @author kyada3
- * @param <E>
- */
 public class SynchronousQueueCustom<E> implements BlockingQueueCustom<E> {
 
 	boolean addingItem = false;

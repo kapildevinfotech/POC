@@ -1,4 +1,6 @@
-package com.sapient;
+package com.sapient.project.screening;
+
+import com.sapient.project.screening.util.ConnectionFactory;
 
 import java.io.IOException;
 import java.nio.ByteBuffer;
@@ -17,13 +19,9 @@ import java.util.Set;
 import javax.sql.DataSource;
 
 
-/**
- * Thread to write the property file
- * @author kyada3
- */
 class WriterThread implements Runnable {
 	
-	//private final static DataSource dataSource = ConnectionFactory.getConnInstance();
+	private final static Connection CONNECTION = ConnectionFactory.getConnInstance();
 	
 	int startIndex;
 	int endIndex;
